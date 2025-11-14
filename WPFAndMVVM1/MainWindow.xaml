@@ -1,0 +1,24 @@
+﻿<Window x:Class="WPFAndMVVM1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFAndMVVM1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Margin="88,117,0,0" TextWrapping="Wrap" Text="Nadia" VerticalAlignment="Top" Width="275"/>
+        <Label Content="{Binding ElementName=TextBox1, Path=Text}" HorizontalAlignment="Left" Margin="88,62,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.047,-0.129"/>
+
+        <TextBox HorizontalAlignment="Left" Margin="100,180,0,0" TextWrapping="Wrap" Text="{Binding ElementName=Textbox2,UpdateSourceTrigger=PropertyChanged, Path=Text, Mode=OneTime}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Textbox2" HorizontalAlignment="Left" Margin="400,180,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+
+        <Slider Name="MySlider" Minimum="0" Maximum="100" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" HorizontalAlignment="Left" Margin="88,256,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="SliderBox" HorizontalAlignment="Left" Margin="363,256,0,0" TextWrapping="Wrap" Text="{Binding ElementName=MySlider, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource, Path=Value}" VerticalAlignment="Top" Width="120"/>
+
+        <Label x:Name="UpdateLabel" Content="{Binding Path=MyLabelText}" HorizontalAlignment="Left" Margin="109,349,0,0" VerticalAlignment="Top" Width="141" Foreground="{x:Null}" Background="#FFE8E3E3" Height="15" DataContext="{Binding MyLabelText}"/>
+        <Button Content="Update" HorizontalAlignment="Center" Margin="0,344,0,0" VerticalAlignment="Top" Click="UpdateLabel_Click"/>
+
+    </Grid>
+</Window>
