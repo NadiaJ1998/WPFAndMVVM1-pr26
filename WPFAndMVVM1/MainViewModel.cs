@@ -17,7 +17,7 @@ namespace WPFAndMVVM1
             set
             {
                 myLabelText = value;
-                OnPropertyChanged(MyLabelText);
+                OnPropertyChanged("MyLabelText");
             }
         }
 
@@ -28,7 +28,7 @@ namespace WPFAndMVVM1
             set
             {
                 myTextBoxText = value;
-                OnPropertyChanged(MyTextBoxText);
+                OnPropertyChanged("MyTextBoxText");
             }
         }   
 

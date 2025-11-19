@@ -17,7 +17,7 @@
         <Slider Name="MySlider" Minimum="0" Maximum="100" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" HorizontalAlignment="Left" Margin="88,256,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBox Name="SliderBox" HorizontalAlignment="Left" Margin="363,256,0,0" TextWrapping="Wrap" Text="{Binding ElementName=MySlider, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource, Path=Value}" VerticalAlignment="Top" Width="120"/>
 
-        <Label x:Name="UpdateLabel" Content="{Binding Path=MyLabelText}" HorizontalAlignment="Left" Margin="109,349,0,0" VerticalAlignment="Top" Width="141" Foreground="{x:Null}" Background="#FFE8E3E3" Height="15" DataContext="{Binding MyLabelText}"/>
+        <Label x:Name="UpdateLabel" Content="{Binding Path=MyLabelText}" HorizontalAlignment="Left" Margin="109,349,0,0" VerticalAlignment="Top" Width="141" Background="#FFE8E3E3"/>
         <Button Content="Update" HorizontalAlignment="Center" Margin="0,344,0,0" VerticalAlignment="Top" Click="UpdateLabel_Click"/>
 
     </Grid>
